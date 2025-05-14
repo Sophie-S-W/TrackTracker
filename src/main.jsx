@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';  // React 18 API
 import './index.css';  // CSS
-import App from '../TrackTracker/src/App';  // App组件
+import App from './App';  // App组件
 
 // 获取并渲染 React 应用
 const root = createRoot(document.getElementById('app')); 
