@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'; // Ensure you import the necessary CSS file for styling
+import './App.css'; 
 
 import EnvelopIcon from './assets/Envelop.svg';
 import FireworkGroup from './assets/FireworkGroup.svg';
 import Icon from './assets/TrackTracker.svg';
 import Logo from './assets/Logo-2.svg';
+import MenuIcon from './assets/Menu.svg';
+import SearchIcon from './assets/Search.svg';
+import StanfordLogo from './assets/Stanford.svg';
+import UCLALogo from './assets/UCLA.svg';
+import ColumbiaLogo from './assets/Columbia.svg';
+import UMichLogo from './assets/UMich.svg';
+import PlusCircle from './assets/PlusCircle.svg';
 
 function App() {
   // State hooks for managing data
