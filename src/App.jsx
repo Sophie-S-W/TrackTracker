@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'; // Ensure you import the necessary CSS file for styling
 
 import EnvelopIcon from './assets/Envelop.svg';
-import FireworkGroup from './assets/Firework Group.svg';
+import FireworkGroup from './assets/FireworkGroup.svg';
 import Icon from './assets/TrackTracker.svg';
 import Logo from './assets/Logo-2.svg';
 
