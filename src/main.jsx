@@ -1,38 +1,49 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';  // React 18 API
+import './index.css';  // CSS
+import App from '../TrackTracker/src/App';  // App组件
 
-/*createRoot(document.getElementById('root')).render(
-  <StrictMode> {/* wrapper component around entire app, only works in development mode. 
-    It helps you identify potential problems in your app by intentionally running extra checks and warnings in the console.
-    It doesn’t affect the app’s production behavior and doesn’t render anything in the DOM — it’s just for debugging.}
-    
-    
-    <App />
-  </StrictMode>,
-)*/
+// 获取并渲染 React 应用
+const root = createRoot(document.getElementById('app')); 
+root.render(
+  <StrictMode>
+    <App />  {/* 渲染 App 组件 */}
+  </StrictMode>
+);
+// src/App.jsx
+import React from 'react';
+import './App.css';
 
-const app = document.querySelector('#app');
-app.innerHTML = `
-  <h1>Live Search</h1>
-  <input type="text" id="searchInput" placeholder="Search items..." />
-  <ul id="itemList"></ul>
-`;
+export default function LandingPage() {
+  return (
+    <div className="landing-page">
+      <div className="bg-firework" />
+      <div className="bg-envelope" />
 
-const items = ['Apple', 'Banana', 'Orange', 'Grapes', 'Mango', 'Pineapple'];
-const itemList = document.getElementById('itemList');
-const searchInput = document.getElementById('searchInput');
+      <header className="top-bar">
+        <img src="/src/assets/Logo.svg" alt="Logo" className="logo" />
+        <button className="menu-btn" />
+      </header>
 
-function renderItems(filter = '') {
-  const filtered = items.filter(item =>
-    item.toLowerCase().includes(filter.toLowerCase())
+      <h1 className="headline">Make your applications easy!</h1>
+
+      <button className="search-button">
+        Add a school
+        <span className="icon" />
+      </button>
+
+      {/* 各校标和加号 */}
+      <div className="college-ucla" />
+      <div className="plus-icon plus-ucla" />
+
+      <div className="college-stanford" />
+      <div className="plus-icon plus-stanford" />
+
+      <div className="college-columbia" />
+      <div className="plus-icon plus-columbia" />
+
+      <div className="college-umich" />
+      <div className="plus-icon plus-umich" />
+    </div>
   );
-  itemList.innerHTML = filtered.map(item => `<li>${item}</li>`).join('');
 }
-
-searchInput.addEventListener('input', (e) => {
-  renderItems(e.target.value);
-});
-
-renderItems(); // initial render

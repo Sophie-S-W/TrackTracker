@@ -1,42 +1,142 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.landing-page {
+  position: relative;
+  width: 440px;
+  height: 956px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 第一层背景：烟花群（Firework Group）*/
+.landing-page .bg-firework {
+  position: absolute;
+  top: -11.4px;
+  left: -10.43px;
+  width: 558.99px;
+  height: 629.6px;
+  background: url('../assets/Firework Group.svg') no-repeat center/cover;
+  background-size: cover;
+}
+
+/* 第二层背景：信封 (Envelop) */
+.landing-page .bg-envelope {
+  position: absolute;
+  top: 484.5px;
+  left: -35px;
+  width: 509px;
+  height: 471.5px;
+  background: url('../assets/Envelop.svg') no-repeat center/contain;
+  background-size: cover;
+}
+
+/* 顶部导航栏 */
+.landing-page .top-bar {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 391px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.landing-page .top-bar .logo {
+  width: auto;
+  height: 38px;
+}
+.landing-page .top-bar .menu-btn {
+  width: 24px;
+  height: 24px;
+  background: url('../assets/Menu.svg') no-repeat center/contain;
+}
+
+/* “Make your applications easy!” 主标题 */
+.landing-page .headline {
+  position: absolute;
+  top: 131px;
+  left: 68px;
+  width: 368px;
+  height: 191px;
+  background: url('../assets/Make your applications easy!.svg') no-repeat center/contain;
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 64px;
+  line-height: 96px;
+  color: #192729;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* “Add a school” 搜索按钮 */
+.landing-page .search-button {
+  position: absolute;
+  top: 370px;
+  left: 75px;
+  width: 290px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  background: #192729;
+  border: 1px solid #2C2C2C;
+  border-radius: 8px;
+  color: #f5f5f5;
+  font-family: 'Inria Serif', serif;
+  font-size: 22px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.landing-page .search-button .icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  background: url('../assets/Search.svg') no-repeat center/contain;
 }
 
-.card {
-  padding: 2em;
+/* Colleges 图标位置 */
+/* 这些坐标从 Figma 上直接拿来，并给每个学校一个 className */
+.landing-page .college-ucla {
+  position: absolute;
+  top: 685px;
+  left: 104px;
+  width: 154px;
+  height: 101px;
+  background: url('../assets/UCLA.svg') no-repeat center/contain;
+}
+.landing-page .college-stanford {
+  position: absolute;
+  top: 516px;
+  left: 69px;
+  width: 117px;
+  height: 135px;
+  background: url('../assets/Stanford.svg') no-repeat center/contain;
+}
+.landing-page .college-columbia {
+  position: absolute;
+  top: 463px;
+  left: calc(51.14%); /* Figma 百分比坐标也可以 */
+  width: 118px;
+  height: 118px;
+  background: url('../assets/Columbia.svg') no-repeat center/contain;
+}
+.landing-page .college-umich {
+  position: absolute;
+  top: 606px;
+  left: calc(62.73%);
+  width: 107px;
+  height: 107px;
+  background: url('../assets/UMich.svg') no-repeat center/contain;
 }
 
-.read-the-docs {
-  color: #888;
+/* 加号小圆圈 (plus circle) */
+.landing-page .plus-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url('../assets/PlusCircle.svg') no-repeat center/contain;
+  border: 4px solid #192729;
+  border-radius: 50%;
 }
+.landing-page .plus-ucla   { top: 685px; left: 51.36%; }
+.landing-page .plus-stanford{ top: 516px; left: 154px; }
+.landing-page .plus-columbia{ top: 453px; left: 71.82%; }
+.landing-page .plus-umich   { top: 589px; left: 86.59%; }
