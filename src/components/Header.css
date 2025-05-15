@@ -1,0 +1,39 @@
+.app-header {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 391px; /*calc(100% - 48px)*/
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 38px;
+  margin-right: 8px;
+}
+
+.header-title {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 28px;
+  color: #192729;
+}
+
+.header-menu-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-menu-btn img {
+  width: 38px;
+  height: 38px;
+}

@@ -1,0 +1,96 @@
+.landing-page {
+  position: relative;
+  width: 440px;
+  height: 956px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 烟火背景 */
+.bg-firework {
+  position: absolute;
+  top: -11.4px;
+  left: -10.43px;
+  width: 558.99px;
+  height: 629.6px;
+  z-index: 0;
+}
+
+/* 信封背景 */
+.bg-envelope {
+  position: absolute;
+  top: 484.5px;
+  left: -35px;
+  width: 509px;
+  height: 471.5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+
+/* 顶部导航栏 */
+.landing-topbar {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 391px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+.brand {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: #192729;
+  width: 124px;
+  height: 35px;
+  line-height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 68px;
+}
+
+
+/* 主标题 */
+.headline {
+  position: absolute;
+  top: 131px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.headline img {
+  max-width: 368px;
+  height: auto;
+}
+
+/* 搜索栏容器 */
+.add-school-wrapper {
+  position: absolute;
+  top: 370px;
+  left: 75px;
+  width: 290px;
+  height: 52px;
+  z-index: 2;
+}
+.add-school-btn {
+  width: 290px;
+  height: 52px;
+  cursor: pointer;
+}
+
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
