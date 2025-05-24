@@ -5,6 +5,10 @@ import Header from '../components/Header'
 import SearchBar from '../components/SearchBar' 
 import Illustration from '../assets/illustration.svg'
 
+import YellowBackground from '../assets/Background.svg'
+import HeaderQuote from '../assets/AddSchoolHeader.svg'
+import Instructions from '../assets/InstructionText.svg'
+
 export default function AddSchoolPage() {
   const [college, setCollege] = useState('')
   const [program, setProgram] = useState('')
@@ -29,7 +33,18 @@ export default function AddSchoolPage() {
 
   return (
     <div className="add-school-page">
-      <Header title="Add School" />
+      <Header/>
+
+      {/* Yellow Background*/}
+        <div 
+          className="background" 
+          style={{ backgroundImage: `url(${YellowBackground})` }}
+        ></div>
+
+      {/* Add a School Header */}
+        <div className="page-title">
+          <img src={HeaderQuote} alt="Add School" />
+        </div>
 
       <div className="add-school-form">
         <div className="form-group">
@@ -83,11 +98,17 @@ export default function AddSchoolPage() {
         </div>
       </div>
 
-      {/* 底部插画 */}
+      {/* 底部插画 & instructions */}
       <img
         src={Illustration}
         alt="illustration"
         className="hero-illustration"
+      />
+
+      <img
+        src={Instructions}
+        alt="Login or Create account to save your progress"
+        className="instructions"
       />
     </div>
   )

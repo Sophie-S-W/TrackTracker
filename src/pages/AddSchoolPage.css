@@ -20,16 +20,12 @@
 }
 
 
-/* 页面标题 */
+/* Add School 标题 */
 .add-school-page .page-title {
   position: absolute;
   top: 18px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Just Me Again Down Here', cursive;
-  font-size: 32px;
-  line-height: 48px;
-  color: #192729;
   z-index: 2;
 }
 
@@ -52,9 +48,14 @@
   gap: 8px;
 }
 .add-school-page .form-group label {
-  font-family: 'Inria Serif', serif;
+  /* font-family: 'Inria Serif', serif;
   font-size: 22px;
-  color: #192729;
+  color: #192729; */
+  font-family: Inria Serif;
+  font-weight: Body/Font Weight Regular;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0%;
 }
 
 /* 通用输入框包装器 */
@@ -113,8 +114,9 @@
 /* 按钮组 */
 .add-school-page .button-group {
   display: flex;
+  margin-top: 16px;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 .add-school-page .btn-save,
 .add-school-page .btn-cancel {
@@ -136,12 +138,18 @@
   box-shadow: 0 4px 4px rgba(0,0,0,0.25);
 }
 
-/* 底部插画 */
+/* 底部插画 & words */
 .add-school-page .hero-illustration {
   position: absolute;
   width: 345px;
-  top: 705px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0px;
+  right: 0px;
   z-index: 1;
+}
+.add-school-page .instructions {
+  position: absolute;
+  width: 250px;
+  left: 43px;
+  top: 661px;
+  z-index: 2;
 }
