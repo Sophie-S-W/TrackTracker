@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import AddSchoolPage from './pages/AddSchoolPage'
+import LoginPage from './pages/LoginPage'
+import SignUpPage from './pages/SignUpPage'
 import './index.css';
 import App from './App.jsx';
 
@@ -12,6 +14,8 @@ root.render(
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/add-school" element={<AddSchoolPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
     </Routes>
   </BrowserRouter>
 )
