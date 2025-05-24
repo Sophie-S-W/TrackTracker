@@ -6,6 +6,11 @@
     npm run dev
 ```
 
+## To Run on phone
+```plaintext
+    npm run dev -- --host
+```
+
 Make sure vite related files are downloaded to the target folder by running following code
 (First time only? i think)
 ```plaintext

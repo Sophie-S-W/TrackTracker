@@ -9,10 +9,11 @@
 /* 烟火背景 */
 .bg-firework {
   position: absolute;
-  top: -11.4px;
-  left: -10.43px;
+  top: 0px;
+  left: 0px;
   width: 558.99px;
   height: 629.6px;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 
@@ -24,16 +25,17 @@
   width: 509px;
   height: 471.5px;
   background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
 }
 
 
 /* 顶部导航栏 */
 .landing-topbar {
   position: absolute;
-  top: 20px;
-  left: 24px;
+  top: 4px;
+  left: 2px;
   width: 391px;
   height: 40px;
   display: flex;
@@ -93,4 +95,45 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
+}
+
+/* school logos */
+.add-logos-wrapper {
+  position: absolute;
+  top: 450px;
+  left: 69px;
+  width: 320px;
+  height: 320px;
+  z-index: 3;
+}
+.top-right{
+  position: absolute;
+  width: 123;
+  height: 128;
+  top: 453px;
+  left: 225px;
+}
+
+.top-left{
+  position: absolute;
+  width: 117;
+  height: 135;
+  top: 516px;
+  left: 69px;
+}
+
+.bottom-right{
+  position: absolute;
+  width: 137;
+  height: 124;
+  top: 589px;
+  left: 276px;
+}
+
+.bottom-left{
+  position: absolute;
+  width: 154;
+  height: 101;
+  top: 685px;
+  left: 104px;
 }
