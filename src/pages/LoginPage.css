@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-/* 整页背景纹理 */
+/* backgroung */
 .login-page__background {
   position: absolute;
   inset: 0;
@@ -16,7 +16,7 @@
   z-index: 0;
 }
 
-/* 黄色卡片背景 */
+/* yellowbg */
 .login-page__card-bg {
   position: absolute;
   top: 229px;
@@ -26,7 +26,7 @@
   z-index: 1;
 }
 
-/* 卡片内容容器，叠在黄色背景前 */
+/* yellowcard */
 .login-page__card {
   position: absolute;
   top: 229px;
@@ -39,7 +39,7 @@
   align-items: center;
 }
 
-/* 卡片顶部 LoginLogo */
+/* LoginLogo */
 .login-page__card-logo {
   width: 73.94px;
   height: 81.85px;
@@ -55,7 +55,7 @@
   
 }
 
-/* 表单整体布局 */
+/* form */
 .login-page__form {
   width: 260px;
   margin-top: 16px; 
@@ -64,7 +64,6 @@
   gap: 16px;
 }
 
-/* 每个字段 */
 .login-page__field label {
   font-family: 'Inria Serif', serif;
   font-size: 16px;
@@ -82,7 +81,7 @@
   box-sizing: border-box;
 }
 
-/* 错误提示 */
+/* error */
 .login-page__error {
   font-family: 'Inria Serif', serif;
   font-size: 16px;
@@ -90,7 +89,7 @@
   text-align: center;
 }
 
-/* 提交按钮：用 svg，不要 outline 黑框 */
+/* botton */
 .login-page__submit {
   display: block;
   margin: 0 auto;
@@ -100,7 +99,7 @@
   cursor: pointer;
 }
 
-/* 忘记密码 */
+/* forget password */
 .login-page__forgot {
   text-align: center;
   font-family: 'Inria Serif', serif;
@@ -109,7 +108,7 @@
   text-decoration: underline;
 }
 
-/* 注册提示 */
+/* jump to signup */
 .login-page__signup {
   margin-top: auto;
   font-family: 'Inria Serif', serif;
