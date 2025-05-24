@@ -1,0 +1,89 @@
+.sign-up-page {
+  position: relative;
+  width: 440px;
+  height: 956px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.sign-up-card {
+  position: absolute;
+  width: 312px;
+  height: 592px;
+  left: 64px;
+  top: 182px;
+  background: #FADB67;
+  box-shadow: inset 0px 4px 4px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.sign-up-card .yellow-bg {
+  position: absolute;
+  width: 312px;
+  height: 592px;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+/* content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 24px;
+}
+.signup-logo {
+  width: 107px;
+  height: auto;
+  display: block;
+  margin: 10px auto 20px auto;
+}
+.card-content .sign-up-form {
+  width: 260px;
+  margin-top: 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card-content .form-group label {
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #192729;
+  margin-bottom: 4px;
+}
+.card-content .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #1E1E1E;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  
+}
+.card-content .error-message {
+  color: #8C1D18;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  text-align: center;
+}
+.submit-wrapper {
+  width: 100%;
+  margin: 48px auto 0 auto; 
+  text-align: center;        
+  font-family: 'Inria Serif', serif;
+  font-size: 36px;           
+  display: block;      
+}
+.bottom-text {
+  text-align: center;
+  margin-top: auto;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+}
+.bottom-links .login-link {
+  color: #192729;
+  text-decoration: underline;
+}

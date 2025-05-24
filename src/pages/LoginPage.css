@@ -1,0 +1,122 @@
+.login-page {
+  position: relative;
+  width: 440px;
+  height: 956px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* backgroung */
+.login-page__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* yellowbg */
+.login-page__card-bg {
+  position: absolute;
+  top: 229px;
+  left: 64px;
+  width: 312px;
+  height: 498px;
+  z-index: 1;
+}
+
+/* yellowcard */
+.login-page__card {
+  position: absolute;
+  top: 229px;
+  left: 64px;
+  width: 312px;
+  height: 498px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LoginLogo */
+.login-page__card-logo {
+  width: 73.94px;
+  height: 81.85px;
+  top: 229px;
+  left: 183.61px;
+  margin-top: 16px;
+
+  font-family: 'Just Me Again Down Here';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  
+}
+
+/* form */
+.login-page__form {
+  width: 260px;
+  margin-top: 16px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-page__field label {
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #192729;
+  margin-bottom: 4px;
+}
+.login-page__field input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #1E1E1E;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* error */
+.login-page__error {
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #8C1D18;
+  text-align: center;
+}
+
+/* botton */
+.login-page__submit {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* forget password */
+.login-page__forgot {
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #192729;
+  text-decoration: underline;
+}
+
+/* jump to signup */
+.login-page__signup {
+  margin-top: auto;
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+}
+.login-page__signup a {
+  color: #192729;
+  text-decoration: underline;
+}
