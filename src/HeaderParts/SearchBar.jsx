@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
-import SearchIcon from '../assets/Search.svg';
+import SearchIcon from '../assets/LandingPage/Search.svg';
 
 export default function SearchBar({ value, onChange, placeholder }) {
   return (

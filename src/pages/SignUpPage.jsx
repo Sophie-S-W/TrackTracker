@@ -7,7 +7,7 @@ import YellowBg from '../assets/SignUpPage/Yellow.svg'
 import Logo from '../assets/SignUpPage/Signup.svg'
 import SubmitButton from '../assets/SignUpPage/CreateAccountButton.svg'
 
-import Header from '../components/Header'
+import Header from '../HeaderParts/Header'
 
 export default function SignUpPage() {
   const [username, setUsername] = useState('')

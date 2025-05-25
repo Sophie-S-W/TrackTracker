@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './AddSchoolPage.css'
-import Header from '../components/Header'      
-import SearchBar from '../components/SearchBar' 
-import Illustration from '../assets/illustration.svg'
+import Header from '../HeaderParts/Header'      
+import SearchBar from '../HeaderParts/SearchBar' 
+import Illustration from '../assets/AddSchoolPage/illustration.svg'
 
-import YellowBackground from '../assets/Background.svg'
-import HeaderQuote from '../assets/AddSchoolHeader.svg'
-import Instructions from '../assets/InstructionText.svg'
+import YellowBackground from '../assets/AddSchoolPage/Background.svg'
+import HeaderQuote from '../assets/AddSchoolPage/AddSchoolHeader.svg'
+import Instructions from '../assets/AddSchoolPage/InstructionText.svg'
 
 export default function AddSchoolPage() {
   const [college, setCollege] = useState('')

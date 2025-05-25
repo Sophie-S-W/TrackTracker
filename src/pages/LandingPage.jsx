@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './LandingPage.css';
-import Header from '../components/Header';
-import SearchBar from '../components/SearchBar';
+import Header from '../HeaderParts/Header';
+import SearchBar from '../HeaderParts/SearchBar';
 
-import FireworkGroup from '../assets/FireworkGroup.svg';
-import Envelop from '../assets/Envelop.svg';
-import TrackTrackerBrand from '../assets/TrackTracker.svg';
-import Slogan from '../assets/slogan.svg';
-import AddSchoolButton from '../assets/AddSchoolButton.svg';
-import SearchIcon from '../assets/Search.svg';
+import FireworkGroup from '../assets/LandingPage/FireworkGroup.svg';
+import Envelop from '../assets/LandingPage/Envelop.svg';
+import TrackTrackerBrand from '../assets/LandingPage/TrackTracker.svg';
+import Slogan from '../assets/LandingPage/slogan.svg';
+import AddSchoolButton from '../assets/LandingPage/AddSchoolButton.svg';
+import SearchIcon from '../assets/LandingPage/Search.svg';
 
-import topRight from '../assets/Columbia.svg';
-import topLeft from '../assets/Stanford.svg';
-import bottomRight from '../assets/UMich.svg';
-import bottomLeft from '../assets/UCLA.svg';
+import topRight from '../assets/LandingPage/Columbia.svg';
+import topLeft from '../assets/LandingPage/Stanford.svg';
+import bottomRight from '../assets/LandingPage/UMich.svg';
+import bottomLeft from '../assets/LandingPage/UCLA.svg';
 
 export default function LandingPage() {
   const [search, setSearch] = useState('');
@@ -28,7 +28,7 @@ export default function LandingPage() {
       <div 
         className="bg-firework" 
         style={{ backgroundImage: `url(${FireworkGroup})` }}
-        ></div>
+      ></div>
 
       {/* 第二层：Envelop  */}
       <img

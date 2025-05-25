@@ -8,7 +8,7 @@ import LoginLogo from '../assets/LoginPage/LoginLogo.svg'
 import SubmitButton from '../assets/LoginPage/SubmitButton.svg'
 // import MenuIcon from '../assets/Menu.svg'
 
-import Header from '../components/Header';
+import Header from '../HeaderParts/Header';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
