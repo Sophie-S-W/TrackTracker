@@ -141,7 +141,7 @@
 /* 底部插画 & words */
 .add-school-page .hero-illustration {
   position: absolute;
-  width: 345px;
+  width: 335px;
   bottom: 0px;
   right: 0px;
   z-index: 1;
@@ -149,7 +149,39 @@
 .add-school-page .instructions {
   position: absolute;
   width: 250px;
-  left: 43px;
+  left: 0px;
   top: 661px;
+  z-index: 2;
+}
+
+/* Login */
+.instructions .login {
+  position: absolute;
+  width: 43px;
+  height: 48px;
+  left: 43px;
+  top: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Create account */
+.instructions .create-account {
+  position: absolute;
+  width: 150px;
+  height: 42px;
+  left: 144px;
+  top: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* or to save your progress */
+.instructions .save-progress {
+  position: absolute;
+  width: 230px;
+  height: 95px;
+  left: 40px;
+  top: 5px;
   z-index: 2;
 }

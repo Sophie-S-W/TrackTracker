@@ -7,7 +7,9 @@ import Illustration from '../assets/AddSchoolPage/illustration.svg'
 
 import YellowBackground from '../assets/AddSchoolPage/Background.svg'
 import HeaderQuote from '../assets/AddSchoolPage/AddSchoolHeader.svg'
-import Instructions from '../assets/AddSchoolPage/InstructionText.svg'
+import Login from '../assets/AddSchoolPage/Login.svg'
+import CreateAccount from '../assets/AddSchoolPage/Create account.svg'
+import SaveProgress from '../assets/AddSchoolPage/or to save your progress.svg'
 
 export default function AddSchoolPage() {
   const [college, setCollege] = useState('')
@@ -79,7 +81,7 @@ export default function AddSchoolPage() {
           />
         </div>
 
-        {/* 按钮组 */}
+        {/* botton */}
         <div className="button-group">
           <button
             type="button"
@@ -98,18 +100,32 @@ export default function AddSchoolPage() {
         </div>
       </div>
 
-      {/* 底部插画 & instructions */}
+      {/* illustration & instructions */}
       <img
         src={Illustration}
         alt="illustration"
         className="hero-illustration"
       />
 
-      <img
-        src={Instructions}
-        alt="Login or Create account to save your progress"
-        className="instructions"
-      />
+      <div className="instructions">
+        <img
+          src={Login}
+          alt="Login"
+          className="login"
+          onClick={() => navigate('/login')}
+        />
+        <img
+          src={CreateAccount}
+          alt="Create account"
+          className="create-account"
+          onClick={() => navigate('/signup')}
+        />
+        <img
+          src={SaveProgress}
+          alt="or to save your progress"
+          className="save-progress"
+        />
+      </div>
     </div>
-  )
+    )
 }
