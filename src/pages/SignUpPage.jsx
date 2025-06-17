@@ -7,7 +7,8 @@ import YellowBg from '../assets/SignUpPage/Yellow.svg'
 import Logo from '../assets/SignUpPage/Signup.svg'
 import SubmitButton from '../assets/SignUpPage/CreateAccountButton.svg'
 
-import Header from '../HeaderParts/Header'
+import Header from '../components/Header'
+import PreLoginMenu from '../components/PreLoginMenu'
 
 export default function SignUpPage() {
   const [username, setUsername] = useState('')
@@ -15,6 +16,7 @@ export default function SignUpPage() {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [error, setError] = useState('')
+  const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
   const handleSubmit = async () => {
@@ -41,26 +43,24 @@ export default function SignUpPage() {
       />
 
       {/* topbar */}
-      <Header />
-
-      <img src={YellowBg} alt="" className="yellow-bg" />
+      <Header onMenuClick={() => setMenuOpen(true)} />
+      {menuOpen && <PreLoginMenu onClose={() => setMenuOpen(false)} />}
 
       {/* yellowbg */}
       <div className="sign-up-card">
+        <img src={YellowBg} alt="" className="yellow-bg" />
         <div className="card-content">
           {/* Logo */}
           <img src={Logo} alt="Sign up" className="signup-logo" />
 
           {/* form */}
           <div className="form-container">
-            
             <div className="form-group">
               <label>Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                // placeholder="you@example.com"
               />
             </div>
 
@@ -70,7 +70,6 @@ export default function SignUpPage() {
                 type="text"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                // placeholder="Your name"
               />
             </div>
 

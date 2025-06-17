@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './LandingPage.css';
-import Header from '../HeaderParts/Header';
-import SearchBar from '../HeaderParts/SearchBar';
+import SearchBar from '../components/SearchBar';
+import Header from '../components/Header';
+import PreLoginMenu from '../components/PreLoginMenu';
 
 import FireworkGroup from '../assets/LandingPage/FireworkGroup.svg';
 import Envelop from '../assets/LandingPage/Envelop.svg';
@@ -18,12 +19,13 @@ import bottomLeft from '../assets/LandingPage/UCLA.svg';
 
 export default function LandingPage() {
   const [search, setSearch] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
   const nav = useNavigate()
 
   return (
     <div className="landing-page">
-      <Header />
-
+      <Header onMenuClick={() => setMenuOpen(true)} />
+      {menuOpen && <PreLoginMenu onClose={() => setMenuOpen(false)} />}
       {/* 第一层：Firework  */}
       <div 
         className="bg-firework" 
@@ -36,18 +38,6 @@ export default function LandingPage() {
         src={Envelop}
         alt="Envelope"
       />
-
-
-      {/* Top Bar 
-      <header className="top-bar">
-        <div className="logo-group">
-          <img src={Logo2} alt="Logo" className="logo-2" />
-          <img src={TrackTrackerBrand} alt="TrackTracker" className="brand" />
-        </div>
-        <button className="menu-btn">
-          <img src={MenuIcon} alt="Menu" />
-        </button>
-      </header>*/}
 
       <div className="landing-topbar">
         <img src={TrackTrackerBrand} alt="TrackTracker" className="brand" />
@@ -74,36 +64,35 @@ export default function LandingPage() {
       </div>
 
       {/* School logos */}
-      <div className = "add-logo-wrapper">
+      <div className="add-logo-wrapper">
         <img
           src={topRight}
-          alt = "Add school"
-          className = "top-right"
-          //TODO onClick {}
+          alt="Add school"
+          className="top-right"
+          onClick={() => nav('/add-school')}
         />
 
         <img
           src={topLeft}
-          alt = "Add school"
-          className = "top-left"
-          //TODO onClick {}
+          alt="Add school"
+          className="top-left"
+          onClick={() => nav('/add-school')}
         />
 
         <img
           src={bottomRight}
-          alt = "Add school"
-          className = "bottom-right"
-          //TODO onClick {}
+          alt="Add school"
+          className="bottom-right"
+          onClick={() => nav('/add-school')}
         />
 
         <img
           src={bottomLeft}
-          alt = "Add school"
-          className = "bottom-left"
-          //TODO onClick {}
+          alt="Add school"
+          className="bottom-left"
+          onClick={() => nav('/add-school')}
         />
       </div>
-      
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './AddSchoolPage.css'
-import Header from '../HeaderParts/Header'      
-import SearchBar from '../HeaderParts/SearchBar' 
+import Header from '../components/Header'      
+import SearchBar from '../components/SearchBar' 
 import Illustration from '../assets/AddSchoolPage/illustration.svg'
 
 import YellowBackground from '../assets/AddSchoolPage/Background.svg'

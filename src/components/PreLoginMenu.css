@@ -1,0 +1,156 @@
+.prelogin-menu-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 440px;
+  height: 956px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 440px;
+  height: 975px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.prelogin-menu-content {
+  font-family: 'Inria Serif', serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.menu-logo {
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+}
+
+.menu-close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-close-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 80px;
+
+  position: absolute;
+  width: 83px;
+  height: 408px;
+  left: 154px;
+  top: 272px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li a {
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Serif', serif;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-list li.divider {
+  width: 50px;
+  height: 1px;
+  background: #FADB67;
+  margin: 4px auto;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.app-header {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 391px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 38px;
+  margin-right: 8px;
+}
+
+.header-title {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 28px;
+  color: #192729;
+}
+
+.header-menu-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-menu-btn img {
+  width: 38px;
+  height: 38px;
+}

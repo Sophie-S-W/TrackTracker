@@ -98,42 +98,42 @@
 }
 
 /* school logos */
-.add-logos-wrapper {
+.add-logo-wrapper {
   position: absolute;
-  top: 450px;
-  left: 69px;
+  top: 40px;
+  left: -10px;
   width: 320px;
   height: 320px;
   z-index: 3;
 }
 .top-right{
   position: absolute;
-  width: 123;
-  height: 128;
+  width: 123px;
+  height: 128px;
   top: 453px;
   left: 225px;
 }
 
 .top-left{
   position: absolute;
-  width: 117;
-  height: 135;
+  width: 117px;
+  height: 135px;
   top: 516px;
   left: 69px;
 }
 
 .bottom-right{
   position: absolute;
-  width: 137;
-  height: 124;
+  width: 137px;
+  height: 124px;
   top: 589px;
   left: 276px;
 }
 
 .bottom-left{
   position: absolute;
-  width: 154;
-  height: 101;
+  width: 154px;
+  height: 101px;
   top: 685px;
   left: 104px;
 }
