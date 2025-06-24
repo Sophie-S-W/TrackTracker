@@ -37,7 +37,7 @@
   width: 314px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
   z-index: 2;
 }
 
@@ -45,7 +45,7 @@
 .add-school-page .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 .add-school-page .form-group label {
   /* font-family: 'Inria Serif', serif;
@@ -58,20 +58,25 @@
   letter-spacing: 0%;
 }
 
-/* 通用输入框包装器 */
-.add-school-page .search-input-wrapper {
-  position: relative;
-}
-.add-school-page .text-input,
+/* 统一 School/Program/Deadline 输入框样式 */
+.add-school-page .form-group input,
 .add-school-page .search-input-wrapper input {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid #d9d9d9;
+  width: 314px;
+  min-width: 240px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color: #1e1e1e;
-  outline: none;
+  color: #1E1E1E;
+  box-sizing: border-box;
 }
 
 /* 放大镜 & 日历图标 */
@@ -184,4 +189,19 @@
   left: 40px;
   top: 5px;
   z-index: 2;
+}
+
+.add-school-page .form-group .description {
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.add-school-page .search-bar {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
 }

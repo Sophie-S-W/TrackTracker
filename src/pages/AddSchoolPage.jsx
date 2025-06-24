@@ -51,14 +51,12 @@ export default function AddSchoolPage() {
       <div className="add-school-form">
         <div className="form-group">
           <label htmlFor="school">School</label>
-          <div className="search-input-wrapper">
-            <SearchBar
-              id="school"
-              value={college}
-              onChange={e => setCollege(e.target.value)}
-              placeholder="Search or enter your own"
-            />
-          </div>
+          <div className="description">Search or enter your own</div>
+          <SearchBar
+            id="school"
+            value={college}
+            onChange={e => setCollege(e.target.value)}
+          />
         </div>
 
         <div className="form-group">

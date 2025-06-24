@@ -58,12 +58,18 @@
   padding: 12px 16px;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color: #1E1E1E;
+  background: #fff;
   border: 1px solid #D9D9D9;
   border-radius: 8px;
   box-sizing: border-box;
-  
+  color: #1E1E1E;
 }
+
+.sign-up-page .form-group input::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
 .card-content .error-message {
   color: #8C1D18;
   font-family: 'Inria Serif', serif;

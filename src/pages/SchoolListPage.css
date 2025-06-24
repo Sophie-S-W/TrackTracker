@@ -1,0 +1,105 @@
+.school-list-page {
+  position: relative;
+  width: 440px;
+  min-height: 956px;
+  background: #8e6d6d; /* 最后改成白色 */
+  overflow-x: hidden;
+  font-family: 'Inria Serif', serif;
+}
+
+/* 顶栏 */
+.school-list-header {
+  position: absolute;
+  top: 19px;
+  left: 24px;
+  width: 391px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+.school-list-header .header-logo {
+  height: 38px;
+}
+.school-list-header .header-title {
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 32px;
+  color: #192729;
+  text-align: center;
+  flex: 1;
+}
+.school-list-header .header-menu-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+}
+
+/* 问候语 */
+.greeting {
+  position: absolute;
+  left: 41px;
+  top: 85px;
+  width: 308px;
+  height: 117px;
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 44px;
+  color: #000;
+  line-height: 140%;
+  white-space: pre-line;
+}
+
+/* Timeline 按钮 */
+.timeline-btn {
+  position: absolute;
+  left: 328px;
+  top: 169px;
+  width: 75px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #192729;
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Inria Serif', serif;
+  font-size: 14px;
+  color: #192729;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* 学校卡片列表 */
+.school-list {
+  position: absolute;
+  top: 220px;
+  left: 36px;
+  width: 367px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 添加按钮 */
+.add-btn {
+  position: absolute; /* 或 fixed，取决于你的布局 */
+  left: 354px;
+  top: 870px;
+  width: 70px;
+  height: 70px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.add-btn-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

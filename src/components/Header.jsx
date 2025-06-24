@@ -29,7 +29,7 @@ export default function Header({ title, onMenuClick }) {
       </header>
 
       {menuOpen && (
-        <PreLoginMenu onClose={() => setMenuOpen(false)} />
+          <PreLoginMenu onClose={() => setMenuOpen(false)} />
       )}
     </>
   );
