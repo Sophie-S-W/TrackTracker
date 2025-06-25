@@ -86,7 +86,7 @@
 
 /* 添加按钮 */
 .add-btn {
-  position: absolute; /* 或 fixed，取决于你的布局 */
+  position: absolute; /* 或 fixed */
   left: 354px;
   top: 870px;
   width: 70px;
