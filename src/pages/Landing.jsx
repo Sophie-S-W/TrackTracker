@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import './LandingPage.css';
+import './Landing.css';
 import SearchBar from '../components/SearchBar';
 import Header from '../components/Header';
 import PreLoginMenu from '../components/PreLoginMenu';
@@ -54,7 +54,7 @@ export default function LandingPage() {
           src={AddSchoolButton}
           alt="Add a school"
           className="add-school-btn"
-          onClick={() => nav('/add-school')}
+          onClick={() => nav('/pre-add-school')}
         />
         <img
           src={SearchIcon}
@@ -69,28 +69,28 @@ export default function LandingPage() {
           src={topRight}
           alt="Add school"
           className="top-right"
-          onClick={() => nav('/add-school')}
+          onClick={() => nav('/pre-add-school')}
         />
 
         <img
           src={topLeft}
           alt="Add school"
           className="top-left"
-          onClick={() => nav('/add-school')}
+          onClick={() => nav('/pre-add-school')}
         />
 
         <img
           src={bottomRight}
           alt="Add school"
           className="bottom-right"
-          onClick={() => nav('/add-school')}
+          onClick={() => nav('/pre-add-school')}
         />
 
         <img
           src={bottomLeft}
           alt="Add school"
           className="bottom-left"
-          onClick={() => nav('/add-school')}
+          onClick={() => nav('/pre-add-school')}
         />
       </div>
     </div>

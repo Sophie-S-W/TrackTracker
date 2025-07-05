@@ -36,7 +36,7 @@ export default function PreLoginMenu({ onClose }) {
             <Link to="/" onClick={onClose}>Home</Link>
           </li>
           <li>
-            <Link to="/add-school" onClick={onClose}>Add School</Link>
+            <Link to="/pre-add-school" onClick={onClose}>Add School</Link>
           </li>
           <li className="divider" />
           <li>

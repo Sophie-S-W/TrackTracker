@@ -1,12 +1,13 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import AddSchoolPage from './pages/AddSchoolPage'
-import LoginPage from './pages/LoginPage'
-import SignUpPage from './pages/SignUpPage'
-import SchoolListPage from './pages/SchoolListPage.jsx'
-import TimelinePage from './pages/TimelinePage.jsx'
+import LandingPage from './pages/Landing'
+import PreAddSchoolPage from './pages/PreAddSchool.jsx'
+import LoginPage from './pages/Login'
+import SignUpPage from './pages/SignUp'
+import SchoolListPage from './pages/SchoolList.jsx'
+import TimelinePage from './pages/Timeline.jsx'
+import AddSchoolPage from './pages/AddSchool.jsx' 
 import './index.css';
 import App from './App.jsx';
 
@@ -15,11 +16,12 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/add-school" element={<AddSchoolPage />} />
+      <Route path="/pre-add-school" element={<PreAddSchoolPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/school-list" element={<SchoolListPage />} />
       <Route path="/timeline" element={<TimelinePage />} />
+      <Route path="/add-school" element={<AddSchoolPage />} />
     </Routes>
   </BrowserRouter>
 )

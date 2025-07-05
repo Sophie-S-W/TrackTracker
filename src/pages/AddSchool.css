@@ -1,0 +1,159 @@
+.add-school-page {
+  position: relative;
+  width: 440px;
+  height: 956px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 黄色背景板 */
+.add-school-page .background {
+  position: absolute;
+  top: 86px;
+  left: 43px;
+  width: 355px;
+  height: 552px;
+  background: #fadb67;
+  box-shadow: inset 0 4px 4px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+
+/* Add School 标题 */
+.add-school-page .page-title {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* 表单容器 */
+.add-school-page .add-school-form {
+  position: absolute;
+  top: 115px;
+  left: 64px;
+  width: 314px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+/* 每一组字段 */
+.add-school-page .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.add-school-page .form-group label {
+  /* font-family: 'Inria Serif', serif;
+  font-size: 22px;
+  color: #192729; */
+  font-family: Inria Serif;
+  font-weight: Body/Font Weight Regular;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+/* 统一 School/Program/Deadline 输入框样式 */
+.add-school-page .form-group input,
+.add-school-page .search-input-wrapper input {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  width: 314px;
+  min-width: 240px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #1E1E1E;
+  box-sizing: border-box;
+}
+
+/* 放大镜 & 日历图标 */
+.add-school-page .search-input-wrapper .search-bar__icon,
+.add-school-page .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2.5px solid #192729;
+  border-radius: 50%;
+}
+
+/* 下拉建议列表 */
+.add-school-page .search-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 3;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.add-school-page .search-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.add-school-page .search-list li:hover {
+  background: #f0f0f0;
+}
+
+/* 按钮组 */
+.add-school-page .button-group {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-school-page .btn-save,
+.add-school-page .btn-cancel {
+  width: 100%;
+  height: 47px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inria Serif', serif;
+  font-size: 22px;
+  color: #192729;
+  cursor: pointer;
+}
+.add-school-page .btn-save {
+  background: #8ad1d7;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+.add-school-page .btn-cancel {
+  background: #e29000;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.add-school-page .form-group .description {
+  font-family: 'Inria Serif', serif;
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.add-school-page .search-bar {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}

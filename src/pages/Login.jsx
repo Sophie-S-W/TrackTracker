@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './LoginPage.css'
+import './Login.css'
 
 import BackgroundPattern from '../assets/LoginPage/Background.svg'
 import YellowBg from '../assets/LoginPage/YellowBg.svg'
@@ -17,15 +17,27 @@ export default function LoginPage() {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    // TODO
+    // check email format
     if (!email.includes('@')) {
-      setError('Invalid Email')
-      return
+      setError('Invalid Email');
+      return;
     }
-    setError('')
-    // 登录成功后跳首页
-    navigate('/')
-  }
+    // check password not empty
+    if (!password) {
+      setError('Password cannot be empty');
+      return;
+    }
+    // check 二者是否匹配
+    const savedEmail = localStorage.getItem('userEmail');
+    const savedPassword = localStorage.getItem('userPassword');
+    if (email !== savedEmail || password !== savedPassword) {
+      setError('Email or password is incorrect');
+      return;
+    }
+    setError('');
+    // 登录成功后跳转首页
+    navigate('/');
+  };
 
   return (
     <div className="login-page">

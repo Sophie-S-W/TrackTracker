@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import SchoolCard from '../components/SchoolCard';
 import AddButton from '../assets/Addbutton.svg';
 import SchoolListHeader from '../assets/SchoollistHeader.svg';
-import './SchoolListPage.css';
+import './SchoolList.css';
 
 function getGreeting() {
   const hour = new Date().getHours();
@@ -24,7 +24,7 @@ export default function SchoolListPage() {
     setSchools(JSON.parse(localStorage.getItem('schools') || '[]'));
   }, []);
 
-    // 监听 localStorage 变化（可选，适合多标签页同步）
+    // 监听 localStorage 变化
   useEffect(() => {
     const onStorage = () => {
       setSchools(JSON.parse(localStorage.getItem('schools') || '[]'));
@@ -38,7 +38,7 @@ export default function SchoolListPage() {
     navigate('/add-school');
   };
 
-  // 跳转到时间线页面（如有）
+  // 跳转到时间线页面
   const handleTimeline = () => {
     navigate('/timeline');
   };

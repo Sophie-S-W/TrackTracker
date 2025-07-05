@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './AddSchoolPage.css'
+import './PreAddSchool.css'
 import Header from '../components/Header'      
 import SearchBar from '../components/SearchBar' 
 import Illustration from '../assets/AddSchoolPage/illustration.svg'
 
 import YellowBackground from '../assets/AddSchoolPage/Background.svg'
 import HeaderQuote from '../assets/AddSchoolPage/AddSchoolHeader.svg'
-import Login from '../assets/AddSchoolPage/Login.svg'
-import CreateAccount from '../assets/AddSchoolPage/Create account.svg'
-import SaveProgress from '../assets/AddSchoolPage/or to save your progress.svg'
 
 export default function AddSchoolPage() {
   const [college, setCollege] = useState('')
@@ -106,32 +103,12 @@ export default function AddSchoolPage() {
         </div>
       </div>
 
-      {/* illustration & instructions */}
+      {/* illustration */}
       <img
         src={Illustration}
         alt="illustration"
         className="hero-illustration"
       />
-
-      <div className="instructions">
-        <img
-          src={Login}
-          alt="Login"
-          className="login"
-          onClick={() => navigate('/login')}
-        />
-        <img
-          src={CreateAccount}
-          alt="Create account"
-          className="create-account"
-          onClick={() => navigate('/signup')}
-        />
-        <img
-          src={SaveProgress}
-          alt="or to save your progress"
-          className="save-progress"
-        />
-      </div>
     </div>
     )
 }

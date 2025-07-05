@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './SignUpPage.css'
+import './SignUp.css'
 
 import BackgroundPattern from '../assets/SignUpPage/Background.svg'
 import YellowBg from '../assets/SignUpPage/Yellow.svg'
@@ -20,17 +20,27 @@ export default function SignUpPage() {
   const navigate = useNavigate()
 
   const handleSubmit = async () => {
-    if (!username || !email || !password || password !== confirmPassword) {
-      setError(password !== confirmPassword ? 'Passwords do not match' : 'All fields are required')
-      return
+    if (!username || !email || !password || !confirmPassword) {
+      setError('All fields are required');
+      return;
     }
-    // TODO: backend
-    try {
-      // await fetch(...)
-      navigate('/login')
-    } catch (e) {
-      setError('Sign up failed')
+    // check 邮箱格式
+    if (!email.includes('@')) {
+      setError('Invalid Email');
+      return;
     }
+    // check 两次密码一致
+    if (password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+    // 保存注册信息到 localStorage
+    localStorage.setItem('username', username);
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userPassword', password);
+    setError('');
+    // 跳转到登录页
+    navigate('/login');
   }
 
   return (

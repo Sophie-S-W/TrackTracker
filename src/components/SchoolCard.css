@@ -7,11 +7,11 @@
   min-height: 100px;
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
   gap: 8px;
 }
 
-/* DDL 日期 */
+/* ddl */
 .school-deadline {
   font-family: 'Inria Serif', serif;
   font-weight: 700;
@@ -20,7 +20,7 @@
   margin-bottom: 4px;
 }
 
-/* 学校名 */
+/* school name */
 .school-name {
   font-family: 'Inria Serif', serif;
   font-size: 18px;
@@ -29,7 +29,7 @@
   line-height: 1.2;
 }
 
-/* 项目名 */
+/* program name */
 .school-program {
   font-family: 'Inria Serif', serif;
   font-size: 16px;
@@ -37,14 +37,14 @@
   line-height: 1.2;
 }
 
-/* 编辑按钮 */
+/* edit botton */
 .edit-btn-icon {
   position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;   /* 或SVG实际宽度 */
-  height: 44px;  /* 或SVG实际高度 */
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   z-index: 2;
 }

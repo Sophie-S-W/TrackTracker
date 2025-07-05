@@ -27,6 +27,7 @@
   white-space: pre-line;
 }
 
+/* 切换回列表页按钮 */
 .list-btn {
   position: absolute;
   left: 328px;
@@ -42,6 +43,7 @@
   cursor: pointer;
 }
 
+/* 时间线竖线 */
 .timeline-vertical {
   position: absolute;
   left: 153px;
@@ -52,6 +54,7 @@
   z-index: 1;
 }
 
+/* 时间线条目列表 */
 .timeline-list {
   position: relative;
   top: 236px;
@@ -62,10 +65,11 @@
   gap: 30px;
 }
 
+/* 单个时间线条目 */
 .timeline-item {
   position: relative;
   width: 369px;
-  height: 80px;
+  height: 95px;
   margin-left: 34px;
   display: flex;
   align-items: flex-start; /* 顶部对齐 */
@@ -130,6 +134,7 @@
   cursor: pointer;
 }
 
+/* 右下角添加按钮 */
 .add-btn {
   position: absolute;
   left: 354px;
