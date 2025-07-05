@@ -7,7 +7,15 @@
   font-family: 'Inria Serif', serif;
 }
 
-/* 顶栏 */
+.page-title {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* topbar */
 .school-list-header {
   position: absolute;
   top: 19px;

@@ -17,8 +17,17 @@ export default function AddSchoolPage() {
   const [deadline, setDeadline] = useState('')
   const navigate = useNavigate()
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     if (!college || !program || !deadline) return;
+    // 读取已有学校
+    const schools = JSON.parse(localStorage.getItem('schools') || '[]');
+    schools.push({ college, program, deadline });
+    // 存回 localStorage
+    localStorage.setItem('schools', JSON.stringify(schools));
+    // 跳转回 SchoolListPage
+    navigate('/school-list');
+  };
+    /* if (!college || !program || !deadline) return;
     try {
       const res = await fetch('/api/colleges', {
         method: 'POST',
@@ -30,8 +39,7 @@ export default function AddSchoolPage() {
     } catch (err) {
       console.error(err);
       alert('添加学校失败：' + err.message);
-    }
-  };
+    } */
 
   return (
     <div className="add-school-page">

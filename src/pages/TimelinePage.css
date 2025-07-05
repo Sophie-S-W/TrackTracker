@@ -1,0 +1,150 @@
+.timeline-page {
+  position: relative;
+  width: 440px;
+  min-height: 956px;
+  background: #3d5b48; /* white */
+  overflow-x: hidden;
+  font-family: 'Inria Serif', serif;
+}
+
+.page-title {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.greeting {
+  position: absolute;
+  left: 41px;
+  top: 85px;
+  width: 308px;
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 44px;
+  color: #000;
+  line-height: 140%;
+  white-space: pre-line;
+}
+
+.list-btn {
+  position: absolute;
+  left: 328px;
+  top: 169px;
+  width: 75px;
+  height: 33px;
+  border: 1px solid #192729;
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Inria Serif', serif;
+  font-size: 14px;
+  color: #192729;
+  cursor: pointer;
+}
+
+.timeline-vertical {
+  position: absolute;
+  left: 153px;
+  top: 247px;
+  width: 4px;
+  height: 728px;
+  background: #FADB67;
+  z-index: 1;
+}
+
+.timeline-list {
+  position: relative;
+  top: 236px;
+  left: 0;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 369px;
+  height: 80px;
+  margin-left: 34px;
+  display: flex;
+  align-items: flex-start; /* 顶部对齐 */
+}
+
+.timeline-date {
+  width: 101px;
+  text-align: right;
+  font-family: 'Inria Serif', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+  margin-right: 10px;
+  margin-top: 2px; /* 日期和学校名顶部对齐 */
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #FADB67;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 2px; /* 圆点和学校对齐 */
+  z-index: 2;
+}
+
+.timeline-content {
+  width: 218px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 8px;
+}
+
+.timeline-school {
+  font-family: 'Inria Serif', serif;
+  font-size: 22px;
+  color: #000;
+}
+
+.timeline-program {
+  font-family: 'Inria Serif', serif;
+  font-size: 20px;
+  color: #E29000;
+}
+
+.timeline-edit {
+  position: absolute;
+  left: 30px;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.timeline-check {
+  position: absolute;
+  left: 65px;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.add-btn {
+  position: absolute;
+  left: 354px;
+  top: 870px;
+  width: 70px;
+  height: 70px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.add-btn-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

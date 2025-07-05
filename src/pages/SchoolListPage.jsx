@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SchoolCard from '../components/SchoolCard';
 import AddButton from '../assets/Addbutton.svg';
+import SchoolListHeader from '../assets/SchoollistHeader.svg';
 import './SchoolListPage.css';
 
 function getGreeting() {
@@ -23,6 +24,15 @@ export default function SchoolListPage() {
     setSchools(JSON.parse(localStorage.getItem('schools') || '[]'));
   }, []);
 
+    // 监听 localStorage 变化（可选，适合多标签页同步）
+  useEffect(() => {
+    const onStorage = () => {
+      setSchools(JSON.parse(localStorage.getItem('schools') || '[]'));
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+  }, []);
+  
   // 跳转到添加学校页面
   const handleAddSchool = () => {
     navigate('/add-school');
@@ -35,21 +45,24 @@ export default function SchoolListPage() {
 
   return (
     <div className="school-list-page">
-      {/* 顶栏 */}
-      <Header title="My Schools" />
+      {/* topbar */}
+      <Header />
+        <div className="page-title">
+          <img src={SchoolListHeader} alt="My School" />
+        </div>
 
-      {/* 问候语 */}
+      {/* greetings */}
       <div className="greeting">
         {getGreeting()},<br />
         {username}
       </div>
 
-      {/* Timeline 按钮 */}
+      {/* Timeline botton */}
       <button className="timeline-btn" onClick={handleTimeline}>
         Timeline
       </button>
 
-      {/* 学校卡片列表 */}
+      {/* school card list */}
       <div className="school-list">
         {schools.length === 0 ? (
           <div style={{ color: '#aaa', fontSize: 18, textAlign: 'center', marginTop: 40 }}>
@@ -62,7 +75,7 @@ export default function SchoolListPage() {
         )}
       </div>
 
-      {/* 添加按钮 */}
+      {/* add botton */}
       <button className="add-btn" onClick={handleAddSchool}>
         <img src={AddButton} alt="Add" className="add-btn-icon" />
       </button>
