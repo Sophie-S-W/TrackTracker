@@ -4,8 +4,9 @@ import './Header.css';
 import Logo2 from '../assets/Logo-2.svg';
 import MenuIcon from '../assets/Menu.svg';
 import PreLoginMenu from './PreLoginMenu';
+import Menu from './Menu';
 
-export default function Header({ title, onMenuClick }) {
+export default function Header({ title }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
@@ -16,6 +17,9 @@ export default function Header({ title, onMenuClick }) {
     }
   };
 
+  // 判断是否登录（可根据实际逻辑调整）
+  const isLoggedIn = !!localStorage.getItem('username');
+  
   return (
     <>
       <header className="app-header">
@@ -23,13 +27,14 @@ export default function Header({ title, onMenuClick }) {
           <img src={Logo2} alt="Logo" className="header-logo" />
           {title && <span className="header-title">{title}</span>}
         </div>
-        <button className="header-menu-btn" onClick={handleMenuClick}>
+        <button className="header-menu-btn" onClick={() => setMenuOpen(true)}>
           <img src={MenuIcon} alt="Menu" />
         </button>
       </header>
-
       {menuOpen && (
-          <PreLoginMenu onClose={() => setMenuOpen(false)} />
+        isLoggedIn
+          ? <Menu onClose={() => setMenuOpen(false)} />
+          : <PreLoginMenu onClose={() => setMenuOpen(false)} />
       )}
     </>
   );
