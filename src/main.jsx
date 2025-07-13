@@ -8,6 +8,7 @@ import SignUpPage from './pages/SignUp'
 import SchoolListPage from './pages/SchoolList.jsx'
 import TimelinePage from './pages/Timeline.jsx'
 import AddSchoolPage from './pages/AddSchool.jsx' 
+import EditSchoolPage from './pages/EditSchool.jsx';
 import './index.css';
 import App from './App.jsx';
 
@@ -22,6 +23,7 @@ root.render(
       <Route path="/school-list" element={<SchoolListPage />} />
       <Route path="/timeline" element={<TimelinePage />} />
       <Route path="/add-school" element={<AddSchoolPage />} />
+      <Route path="/edit-school/:id" element={<EditSchoolPage />} />
     </Routes>
   </BrowserRouter>
 )
