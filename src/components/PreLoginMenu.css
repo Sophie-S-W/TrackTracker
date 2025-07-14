@@ -108,7 +108,7 @@
 
 .menu-list li.divider {
   width: 50px;
-  height: 1px;
+  height: 0px;
   background: #FADB67;
   margin: 4px auto;
   border-radius: 10px;
