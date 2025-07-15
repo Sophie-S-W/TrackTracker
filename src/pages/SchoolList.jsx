@@ -5,8 +5,8 @@ import SchoolCard from '../components/SchoolCard';
 import AddButton from '../assets/Addbutton.svg';
 import SchoolListHeader from '../assets/SchoollistHeader.svg';
 import './SchoolList.css';
-import { SwipeableList, SwipeableListItem } from 'react-swipeable-list';
-import 'react-swipeable-list/dist/styles.css';
+//import { SwipeableList, SwipeableListItem } from 'react-swipeable-list';
+//import 'react-swipeable-list/dist/styles.css';
 import CheckIcon from '../assets/Check.svg';
 
 function getGreeting() {
