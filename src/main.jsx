@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'; 
 import LandingPage from './pages/Landing'
 import PreAddSchoolPage from './pages/PreAddSchool.jsx'
 import LoginPage from './pages/Login'
@@ -14,7 +14,7 @@ import App from './App.jsx';
 
 const root = createRoot(document.getElementById('app'))
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/pre-add-school" element={<PreAddSchoolPage />} />
@@ -25,5 +25,5 @@ root.render(
       <Route path="/add-school" element={<AddSchoolPage />} />
       <Route path="/edit-school/:id" element={<EditSchoolPage />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )
