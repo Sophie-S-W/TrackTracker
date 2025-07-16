@@ -1,7 +1,6 @@
 {
   "name": "TrackTracker",
   "homepage": "https://Sophie-S-W.github.io/TrackTracker/",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
