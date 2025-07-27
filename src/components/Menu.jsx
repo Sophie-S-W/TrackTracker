@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Logo2 from '../assets/Logo-2.svg';
 import CloseIcon from '../assets/Menu/close.svg';
 import './Menu.css';
@@ -38,10 +38,10 @@ export default function Menu({ onClose }) {
         <nav className="menu-nav">
           <ul className="menu-list">
             <li>
-              <a href="/" onClick={onClose}>Home</a>
+              <Link to="/" onClick={onClose}>Home</Link>
             </li>
             <li>
-              <a href="/school-list" onClick={onClose}>My Schools</a>
+              <Link to="/school-list" onClick={onClose}>My Schools</Link>
             </li>
             <li className="divider" />
             <li>

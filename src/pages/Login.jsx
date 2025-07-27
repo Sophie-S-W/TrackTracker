@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './Login.css'
 
 import BackgroundPattern from '../assets/LoginPage/Background.svg'
@@ -102,7 +102,7 @@ export default function LoginPage() {
             Forgot Password
           </a>
           <div className="login-page__signup">
-            Doesn’t have an account? <a href="/signup">Sign up</a>
+            Doesn't have an account? <Link to="/signup">Sign up</Link>
           </div>
         </div>
       </div>

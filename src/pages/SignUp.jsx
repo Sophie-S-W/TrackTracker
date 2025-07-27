@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './SignUp.css'
 
 import BackgroundPattern from '../assets/SignUpPage/Background.svg'
@@ -109,7 +109,7 @@ export default function SignUpPage() {
 
           {/* jump */}
           <div className="bottom-text">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <Link to="/login">Login</Link>
           </div>
         </div>
       </div>
