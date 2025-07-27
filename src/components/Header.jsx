@@ -27,7 +27,7 @@ export default function Header({ title }) {
           <img src={Logo2} alt="Logo" className="header-logo" />
           {title && <span className="header-title">{title}</span>}
         </div>
-        <button className="header-menu-btn" onClick={() => setMenuOpen(true)}>
+        <button className="header-menu-btn" onClick={handleMenuClick}>
           <img src={MenuIcon} alt="Menu" />
         </button>
       </header>
