@@ -6,7 +6,7 @@ import MenuIcon from '../assets/Menu.svg';
 import PreLoginMenu from './PreLoginMenu';
 import Menu from './Menu';
 
-export default function Header({ title }) {
+export default function Header({ title, onMenuClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
