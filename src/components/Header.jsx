@@ -17,7 +17,7 @@ export default function Header({ title, onMenuClick }) {
     }
   };
 
-  // 判断是否登录（可根据实际逻辑调整）
+  // 判断是否登录
   const isLoggedIn = !!localStorage.getItem('username');
   
   return (
