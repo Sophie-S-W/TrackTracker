@@ -29,6 +29,11 @@ export default function SignUpPage() {
       setError('Invalid Email');
       return;
     }
+    // check 密码符合要求 (长度 >= 6, 包含数字和大小写字符)
+    if (password.length < 6 || !/\d/.test(password) || !/[A-Z]/.test(password) || !/[a-z]/.test(password)){
+      setError('Invalid Password');
+      return;
+    }
     // check 两次密码一致
     if (password !== confirmPassword) {
       setError('Passwords do not match');
@@ -89,6 +94,7 @@ export default function SignUpPage() {
                 type="password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
+                title="Password must be at least 6 characters and contain number, lowerclass, and upperclass characters" //提示用户密码要求
               />
             </div>
             <div className="form-group">
