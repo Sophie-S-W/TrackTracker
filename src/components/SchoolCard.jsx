@@ -18,7 +18,7 @@ export default function SchoolCard({ college, program, deadline, id }) {
 
   const handleEdit = (e) => {
     e.stopPropagation();
-    navigate(`/edit-school/${id}`); // 跳转到编辑页面，带上学校id
+    navigate(`/edit-school/${id}`); // navigate to edit page, with school id
   };
 
   return (

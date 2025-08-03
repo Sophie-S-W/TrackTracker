@@ -41,7 +41,7 @@
   cursor: grabbing;
 }
 
-/* 移动端优化 */
+/* 移动端 */
 @media (max-width: 390px) {
   .swipeable-card-container {
     margin-bottom: 24px;
@@ -52,7 +52,7 @@
   }
 }
 
-/* 防止文本选择 */
+/* 防文本选择 */
 .swipeable-card * {
   user-select: none;
   -webkit-user-select: none;

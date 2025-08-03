@@ -21,7 +21,7 @@ const SwipeableCard = ({ children, onSwipe, threshold = 0.3 }) => {
     const touch = e.touches[0];
     const deltaX = touch.clientX - startX;
     
-    // 只允许向左滑动
+    // only allow left swipe
     if (deltaX < 0) {
       setCurrentX(touch.clientX);
       setTranslateX(deltaX);
@@ -36,10 +36,10 @@ const SwipeableCard = ({ children, onSwipe, threshold = 0.3 }) => {
     const swipeThreshold = cardWidth * threshold;
     
     if (Math.abs(deltaX) > swipeThreshold) {
-      // 触发swipe动作
+      // trigger swipe
       onSwipe();
     } else {
-      // 重置位置
+      // reset position
       setTranslateX(0);
     }
     
@@ -57,7 +57,7 @@ const SwipeableCard = ({ children, onSwipe, threshold = 0.3 }) => {
     
     const deltaX = e.clientX - startX;
     
-    // 只允许向左滑动
+    // only allow left swipe
     if (deltaX < 0) {
       setCurrentX(e.clientX);
       setTranslateX(deltaX);
@@ -72,10 +72,10 @@ const SwipeableCard = ({ children, onSwipe, threshold = 0.3 }) => {
     const swipeThreshold = cardWidth * threshold;
     
     if (Math.abs(deltaX) > swipeThreshold) {
-      // 触发swipe动作
+      // trigger swipe
       onSwipe();
     } else {
-      // 重置位置
+      // reset position
       setTranslateX(0);
     }
     
@@ -90,12 +90,12 @@ const SwipeableCard = ({ children, onSwipe, threshold = 0.3 }) => {
 
   return (
     <div className="swipeable-card-container">
-      {/* 背景确认按钮 */}
+      {/* background check button */}
       <div className="swipe-action-button">
         <div className="check-icon">✓</div>
       </div>
       
-      {/* 可滑动的卡片 */}
+      {/* swipeable card */}
       <div
         ref={cardRef}
         className={`swipeable-card ${isDragging ? 'dragging' : ''}`}

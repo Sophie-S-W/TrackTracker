@@ -34,24 +34,24 @@ export default function SchoolListPage() {
     return () => window.removeEventListener('storage', onStorage);
   }, []);
   
-  // 跳转到添加学校页面
+  // navigate to add school page
   const handleAddSchool = () => {
     navigate('/add-school');
   };
 
-  // 跳转到时间线页面
+  // navigate to timeline page
   const handleTimeline = () => {
     navigate('/timeline');
   };
 
   const handleCheck = (school, idx) => {
-    // 标记学校为已完成状态
+    // mark school as completed
     const newSchools = [...schools];
     newSchools.splice(idx, 1);
     setSchools(newSchools);
     localStorage.setItem('schools', JSON.stringify(newSchools));
     
-    // 添加触觉反馈（如果支持）
+    // add haptic feedback
     if (navigator.vibrate) {
       navigator.vibrate(100);
     }
