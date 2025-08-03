@@ -1,0 +1,60 @@
+.swipeable-card-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.swipe-action-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 63px;
+  height: 100%;
+  background: #246068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.check-icon {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.swipeable-card {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background: transparent;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.swipeable-card.dragging {
+  cursor: grabbing;
+}
+
+/* 移动端优化 */
+@media (max-width: 390px) {
+  .swipeable-card-container {
+    margin-bottom: 24px;
+  }
+  
+  .swipe-action-button {
+    width: 63px;
+  }
+}
+
+/* 防止文本选择 */
+.swipeable-card * {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+} 

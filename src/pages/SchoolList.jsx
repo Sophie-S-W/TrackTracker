@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SchoolCard from '../components/SchoolCard';
+import SwipeableCard from '../components/SwipeableCard';
 import AddButton from '../assets/Addbutton.svg';
 import SchoolListHeader from '../assets/SchoollistHeader.svg';
 import './SchoolList.css';
-//import { SwipeableList, SwipeableListItem } from 'react-swipeable-list';
-//import 'react-swipeable-list/dist/styles.css';
-import CheckIcon from '../assets/Check.svg';
 
 function getGreeting() {
   const hour = new Date().getHours();
@@ -47,12 +45,18 @@ export default function SchoolListPage() {
   };
 
   const handleCheck = (school, idx) => {
-    // 这里可以做“标记完成”或“删除”或其他操作
-    // 例如：将该学校从列表中移除
+    // 标记学校为已完成状态
     const newSchools = [...schools];
     newSchools.splice(idx, 1);
     setSchools(newSchools);
     localStorage.setItem('schools', JSON.stringify(newSchools));
+    
+    // 添加触觉反馈（如果支持）
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+    
+    console.log(`Marked ${school.college} as completed`);
   };
 
   return (
@@ -81,33 +85,17 @@ export default function SchoolListPage() {
             No schools yet. Click the + button to add one!
           </div>
         ) : (
-          <SwipeableList>
+          <div className="school-cards-container">
             {schools.map((school, idx) => (
-              <SwipeableListItem
+              <SwipeableCard
                 key={idx}
-                swipeRight={{
-                  content: (
-                    <div
-                      style={{
-                        background: '#246068',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: '10px',
-                        width: '70px'
-                      }}
-                    >
-                      <img src={CheckIcon} alt="Check" style={{ width: 32, height: 32 }} />
-                    </div>
-                  ),
-                  action: () => handleCheck(school, idx)
-                }}
+                onSwipe={() => handleCheck(school, idx)}
+                threshold={0.25}
               >
                 <SchoolCard {...school} />
-              </SwipeableListItem>
+              </SwipeableCard>
             ))}
-          </SwipeableList>
+          </div>
         )}
       </div>
 

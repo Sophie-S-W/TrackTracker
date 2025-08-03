@@ -9,9 +9,13 @@
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 24px; /* 卡片之间的间隔 */
-  width: 600px;
-  max-width: 90vw; /* 保证在小屏幕下不会溢出 */
+  width: 100%;
+  box-sizing: border-box;
+  touch-action: pan-x;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  margin: 0 auto;
 }
 
 /* ddl */
